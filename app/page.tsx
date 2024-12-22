@@ -1,101 +1,152 @@
 import Image from "next/image";
+import NavBar from "@/components/NavBar";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import Hero from "@/public/Hero.jpg";
+
+const products = [
+  {
+    title: "Organic Fruits",
+    description: "Freshly picked organic fruits",
+  },
+  {
+    title: "Organic Vegetables",
+    description: "Locally sourced organic vegetables",
+  },
+  {
+    title: "Organic Grains",
+    description: "Whole grains for healthy living",
+  },
+  {
+    title: "Organic Dairy",
+    description: "Dairy products from organic farms",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <main className="flex min-h-screen flex-col">
+      {/* Hero Section */}
+      <section className="pt-24 pb-12 md:pt-32 md:pb-20 relative min-h-screen flex items-center bg-black/70">
         <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src={Hero}
+          alt="Eco-friendly exports"
+          fill
+          className="object-cover -z-10"
           priority
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div className="wrapper relative">
+          <div className="absolute top-0 left-0 w-1/2 h-full flex items-center justify-center">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <div className="flex-1 space-y-4 text-white">
+                <h1>Sustainable Export Solutions for a Better World</h1>
+                <p className="text-lg ">
+                  We connect eco-conscious producers with global markets,
+                  promoting sustainable trade practices.
+                </p>
+                <Button variant="outline" size="lg" className="text-black">
+                  Learn More
+                </Button>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-12 bg-accent/50">
+        <div className="wrapper">
+          <h2 className="text-3xl font-bold text-center mb-12">About Us</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="col-span-1 md:col-span-3">
+              <p className="text-lg text-gray-700 mb-6">
+                PT Kayana Kreatif Nusantara is an exporter of high-quality
+                natural bamboo products. Located in Semarang, Indonesia, our
+                company collaborates with local artisans from various regions in
+                Central Java, Indonesia. The products we create fall into
+                categories such as homeware, kitchenware, and utensils, all
+                crafted to meet diverse market needs.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                Our dedication to excellence is reflected in every product
+                crafted by our skilled artisans, who combine traditional
+                techniques with modern design aesthetics. We prioritize
+                sustainability by utilizing eco-friendly materials and adhering
+                to rigorous quality standards throughout our production process.
+              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                With a focus on customization, we offer an extensive selection
+                of designs and sizes tailored to meet the specific preferences
+                of our global clientele. Through continuous innovation and a
+                strong commitment to quality, PT Kayana Kreatif Nusantara stands
+                as a trusted partner for businesses seeking reliable, high-value
+                bamboo products in both domestic and international markets.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="py-12 bg-accent/50">
+        <div className="wrapper">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Products</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-4">
+            {/* Add your product cards here */}
+            {products.map((product) => (
+              <Card>
+                <CardHeader>
+                  <CardTitle>{product.title}</CardTitle>
+                  <CardDescription>{product.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  {/* <img src="" alt={product.title} /> */}
+                  <div className="h-40 w-full bg-gray-300 rounded-md"></div>
+                </CardContent>
+              </Card>
+            ))}
+            {/* Add more product cards */}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="py-12">
+        <div className="wrapper">
+          <h2 className="text-center mb-12">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+            <AccordionItem value="item-1">
+              <AccordionTrigger>
+                What makes your products eco-friendly?
+              </AccordionTrigger>
+              <AccordionContent>
+                Our products are sourced from sustainable producers who follow
+                strict environmental guidelines...
+              </AccordionContent>
+              <AccordionTrigger>
+                What makes your products eco-friendly?
+              </AccordionTrigger>
+              <AccordionContent>
+                Our products are sourced from sustainable producers who follow
+                strict environmental guidelines...
+              </AccordionContent>
+            </AccordionItem>
+            {/* Add more FAQ items */}
+          </Accordion>
+        </div>
+      </section>
+    </main>
   );
 }
