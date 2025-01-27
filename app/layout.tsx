@@ -19,7 +19,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "EcoExport - Sustainable Export Solutions",
+  title: "Kayana Kreatif Nusantara - Sustainable Export Solutions",
   description: "Connecting eco-conscious producers with global markets",
 };
 

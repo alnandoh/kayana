@@ -45,13 +45,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Phone className="min-w-6 h-6 text-green-500 mr-3" />
-                <p className="text-sm lg:text-base">
-                  Whatsapp: +62 811-1111-1111
+                <p className="text-sm md:text-base">
+                  Whatsapp: +62 877-1140-1996
                 </p>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center justify-center">
                 <Mail className="min-w-6 h-6 text-slate-300 mr-3" />
-                <p className="text-sm lg:text-base">kayana@gmail.com</p>
+                <p className="text-sm md:text-base">
+                  kayanakreatifnusantara@gmail.com
+                </p>
               </div>
             </div>
           </div>
