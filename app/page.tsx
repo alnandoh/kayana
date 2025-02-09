@@ -11,6 +11,7 @@ import Approach from "./_components/Approach";
 import Hero from "./_components/Hero";
 import About from "./_components/About";
 import Faq from "./_components/Faq";
+import Product from "./_components/Product";
 
 const products = [
   {
@@ -38,6 +39,7 @@ export default function Home() {
       <About />
       <Values />
       <Approach />
+      <Product />
       <Gallery />
       <Faq />
     </main>
