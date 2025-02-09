@@ -1,5 +1,4 @@
 import { Mail, MapPin, Phone } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 import FooterLogo from "@/public/whatsapp.png";
 import Map from "./Map";
@@ -15,16 +14,14 @@ export default function Footer() {
       <div className="wrapper mx-auto py-8 px-4 md:px-8 space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center md:items-start">
-            {/* <Link href="/" className="mb-4">
-              <div className="relative w-40 h-24">
-                <Image
-                  src=""
-                  alt="Nusa Bean Logo"
-                  className="object-contain"
-                  fill
-                />
-              </div>
-            </Link> */}
+            <div className="relative w-[280px] h-[120px]">
+              <Image
+                src="/logo700x300.png"
+                alt="Nusa Bean Logo"
+                className="object-contain"
+                fill
+              />
+            </div>
             <p className="text-justify md:text-left text-sm lg:text-base">
               PT Kayana Kreatif Nusantara is an exporter of high-quality natural
               bamboo products. With a focus on customization, we offer an

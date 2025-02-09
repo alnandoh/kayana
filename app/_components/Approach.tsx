@@ -6,11 +6,10 @@ export default function Approach() {
       <div className="wrapper">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="font-bold text-bamboo-brown ">
-              Our Approach
-              <br />
-              <h3 className="md:mt-4">Enhancing Everyday Essentials</h3>
-            </h2>
+            <h2 className="font-bold text-bamboo-brown mb-4">Our Approach</h2>
+            <h3 className="font-semibold text-bamboo-brown/90 md:mt-4">
+              Enhancing Everyday Essentials
+            </h3>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -34,7 +33,7 @@ export default function Approach() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden">
               <Image
-                src="/1.jpg"
+                src="/header.jpg"
                 alt="Traditional craftsmanship"
                 fill
                 className="object-cover"
