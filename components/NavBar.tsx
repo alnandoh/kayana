@@ -8,7 +8,7 @@ export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b">
+    <nav className="fixed top-0 w-full bg-natural-cream/80 backdrop-blur-sm z-50 border-b">
       <div className="wrapper">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -18,19 +18,19 @@ export default function NavBar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <Link href="/#products" className="hover:text-primary">
-              Products
-            </Link>
             <Link href="/#about" className="hover:text-primary">
               About
             </Link>
-            <Link href="/#partners" className="hover:text-primary">
-              Partners
+            <Link href="/#products" className="hover:text-primary">
+              Products
             </Link>
-            <Link href="/blog" className="hover:text-primary">
-              Blog
+            <Link href="/#gallery" className="hover:text-primary">
+              Gallery
             </Link>
-            <Button asChild>
+            <Link href="/#faq" className="hover:text-primary">
+              FAQ
+            </Link>
+            <Button asChild className="bg-bamboo-green text-natural-cream border border-natural-earth hover:bg-bamboo-green/90">
               <Link href="/#contact">Contact Us</Link>
             </Button>
           </div>
@@ -48,28 +48,28 @@ export default function NavBar() {
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-2">
             <Link
-              href="/#products"
-              className="block px-4 py-2 hover:bg-accent rounded-md"
-            >
-              Products
-            </Link>
-            <Link
               href="/#about"
               className="block px-4 py-2 hover:bg-accent rounded-md"
             >
               About
             </Link>
             <Link
-              href="/#partners"
+              href="/#products"
               className="block px-4 py-2 hover:bg-accent rounded-md"
             >
-              Partners
+              Products
             </Link>
             <Link
-              href="/blog"
+              href="/#gallery"
               className="block px-4 py-2 hover:bg-accent rounded-md"
             >
-              Blog
+              Gallery
+            </Link>
+            <Link
+              href="/#faq"
+              className="block px-4 py-2 hover:bg-accent rounded-md"
+            >
+              FAQ
             </Link>
             <div className="px-4 pt-2">
               <Button asChild className="w-full">
