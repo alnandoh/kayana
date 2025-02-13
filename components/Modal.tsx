@@ -1,6 +1,6 @@
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface ModalProps {
   isOpen: boolean;

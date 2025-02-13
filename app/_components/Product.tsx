@@ -2,7 +2,7 @@
 import { useState, useCallback } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Modal } from "@/components/Modal";
 
 interface ProductImage {
@@ -165,7 +165,7 @@ export default function Product() {
   }, [selectedIndex]);
 
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8">
+    <section className="px-4 py-16 sm:px-6 lg:px-8" id="products">
       <div className="wrapper">
         <h2 className="mb-10 text-center text-natural-earth">Our Products</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">

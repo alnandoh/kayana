@@ -29,8 +29,8 @@ export default function Footer() {
               specific preferences of our global clientele
             </p>
           </div>
-          <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
+          <div className="flex flex-col items-center">
+            <h3 className="mb-4">Contact Us</h3>
             <div className="space-y-4">
               <div className="flex items-center">
                 <MapPin className="min-w-6 h-6 text-red-500 mr-3" />
