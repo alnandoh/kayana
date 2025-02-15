@@ -48,7 +48,7 @@ export function Modal({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75"
+      className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80"
       onClick={onClose}
     >
       <motion.div
@@ -56,7 +56,7 @@ export function Modal({
         className="relative max-w-4xl w-full h-[80vh] bg-natural-cream rounded-lg overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="absolute top-4 right-4 z-10 flex items-center gap-4">
+        <div className="absolute top-1 right-1 sm:top-4 sm:right-4 z-10 flex items-center gap-4">
           <span className="px-3 py-1 rounded-full bg-black/50 text-natural-cream text-sm">
             {currentIndex} / {totalImages}
           </span>
@@ -74,13 +74,13 @@ export function Modal({
 
         <button
           onClick={onPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 text-natural-cream hover:bg-black/75 transition-colors"
+          className="absolute left-0 sm:left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 text-natural-cream hover:bg-black/75 transition-colors"
         >
           <ChevronLeft className="h-6 w-6" />
         </button>
         <button
           onClick={onNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 text-natural-cream hover:bg-black/75 transition-colors"
+          className="absolute right-0 sm:right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 text-natural-cream hover:bg-black/75 transition-colors"
         >
           <ChevronRight className="h-6 w-6" />
         </button>

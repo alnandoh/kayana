@@ -107,7 +107,7 @@ const galleryImages: GalleryImage[] = [
   },
 ];
 
-export default function Gallery(){
+export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
@@ -135,11 +135,14 @@ export default function Gallery(){
     setSelectedImage(galleryImages[prevIndex]);
     setSelectedIndex(prevIndex);
   }, [selectedIndex]);
-  
+
   return (
-    <section className="bg-natural-cream px-4 py-16 sm:px-6 lg:px-8" id="gallery">
+    <section
+      className="bg-natural-cream px-4 py-16 sm:px-6 lg:px-8"
+      id="gallery"
+    >
       <div className="wrapper mx-auto">
-        <h2 className="mb-10 text-center text-natural-earth">Our Gallery</h2>
+        <h2 className="mb-10 text-center text-natural-earth">Gallery</h2>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {galleryImages.map((image, index) => (
             <motion.div
@@ -163,14 +166,6 @@ export default function Gallery(){
                         />
                       </motion.div>
                     </div>
-                    <motion.div
-                      layoutId={`title-${image.id}`}
-                      className="absolute bottom-0 left-0 right-0 bg-bamboo-green/90 p-4"
-                    >
-                      <h3 className="text-lg text-center font-semibold text-natural-cream">
-                        {image.title}
-                      </h3>
-                    </motion.div>
                   </div>
                 </CardContent>
               </Card>
@@ -189,22 +184,22 @@ export default function Gallery(){
               currentIndex={selectedIndex !== null ? selectedIndex + 1 : 0}
               totalImages={galleryImages.length}
             >
-              <div className="relative w-full h-full">
+              <div className="flex flex-col w-full h-full">
                 <motion.div
                   layoutId={`image-${selectedImage.id}`}
-                  className="h-full"
+                  className=" relative h-full"
                 >
                   <Image
                     src={selectedImage.src}
                     alt={selectedImage.alt}
                     fill
-                    className="object-contain p-4"
+                    className="object-contain p-2 pb-14"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
                   />
                 </motion.div>
                 <motion.div
                   layoutId={`title-${selectedImage.id}`}
-                  className="absolute bottom-0 left-0 right-0 bg-bamboo-green/90 p-4"
+                  className="absolute bottom-0 left-0 right-0 bg-bamboo-green p-4"
                 >
                   <h3 className="text-lg text-center font-semibold text-natural-cream">
                     {selectedImage.title}
@@ -217,4 +212,4 @@ export default function Gallery(){
       </div>
     </section>
   );
-};
+}

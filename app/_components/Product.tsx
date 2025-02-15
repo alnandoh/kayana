@@ -133,6 +133,83 @@ const productImages: ProductImage[] = [
     title: "Bamboo Tray Organizer",
     tag: "Bamboonesia",
   },
+  {
+    id: 18,
+    src: "/bamboo_straw.png",
+    alt: "Bamboo Straw",
+    title: "Bamboo Straw",
+    tag: "Bamboonesia",
+  },
+  {
+    id: 19,
+    src: "/wawanbamboo/wb-box-001.png",
+    alt: "Bamboo Box",
+    title: "Bamboo Box",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 20,
+    src: "/wawanbamboo/wb-box-002.png",
+    alt: "Bamboo Box",
+    title: "Bamboo Box",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 21,
+    src: "/wawanbamboo/wb-coilplate-001.png",
+    alt: "Bamboo Coil Plate",
+    title: "Bamboo Coil Plate",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 22,
+    src: "/wawanbamboo/wb-cutlery-001.png",
+    alt: "Bamboo Cutlery",
+    title: "Bamboo Cutlery",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 23,
+    src: "/wawanbamboo/wb-lampdecor-001.png",
+    alt: "Bamboo Lamp Decoration",
+    title: "Bamboo Lamp Decoration",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 24,
+    src: "/wawanbamboo/wb-plaincup-001.png",
+    alt: "Bamboo Plain Cup",
+    title: "Bamboo Plain Cup",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 25,
+    src: "/wawanbamboo/wb-stainlesscup-001.png",
+    alt: "Bamboo Stainless Cup",
+    title: "Bamboo Stainless Cup",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 26,
+    src: "/wawanbamboo/wb-stainlesscuphandle-001.png",
+    alt: "Bamboo Stainless Cup Handle",
+    title: "Bamboo Stainless Cup Handle",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 27,
+    src: "/wawanbamboo/wb-stainlesstumblr-001.png",
+    alt: "Bamboo Stainless Tumblr",
+    title: "Bamboo Stainless Tumblr",
+    tag: "Wawan Bamboo",
+  },
+  {
+    id: 28,
+    src: "/wawanbamboo/wb-toothbrushnylon-001.png",
+    alt: "Bamboo Toothbrush Nylon",
+    title: "Bamboo Toothbrush Nylon",
+    tag: "Wawan Bamboo",
+  },
 ];
 
 export default function Product() {
@@ -177,8 +254,8 @@ export default function Product() {
             >
               <Card className="group cursor-pointer overflow-hidden transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-0">
-                  <div className="relative">
-                    <div className="relative h-[300px] w-full">
+                  <div className="flex flex-col">
+                    <div className="relative h-[300px] aspect-square w-full">
                       <motion.div
                         layoutId={`image-${image.id}`}
                         className="h-full"
@@ -187,13 +264,13 @@ export default function Product() {
                           src={image.src}
                           alt={image.alt}
                           fill
-                          className="object-contain p-4"
+                          className="object-contain"
                         />
                       </motion.div>
                     </div>
                     <motion.div
                       layoutId={`title-${image.id}`}
-                      className="absolute bottom-0 left-0 right-0 bg-bamboo-green/90 p-4"
+                      className="bg-bamboo-green/90 p-4"
                     >
                       <h3 className="text-lg text-center font-semibold text-natural-cream">
                         {image.title}
