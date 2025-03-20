@@ -44,22 +44,24 @@ const productImages: ProductImage[] = [
         title: "Bamboo Pan Holder",
         tag: "Bamboonesia",
       },
-    ]
+    ],
   },
-  // {
-  //   id: 1,
-  //   src: "/bamboonesia/bn-ovallaminatedplate-001.png",
-  //   alt: "Bamboo Oval Laminated Plate",
-  //   title: "Bamboo Oval Laminated Plate",
-  //   tag: "Bamboonesia",
-  // },
-  // {
-  //   id: 2,
-  //   src: "/bamboonesia/bn-panholder-001.png",
-  //   alt: "Bamboo Pan Holder",
-  //   title: "Bamboo Pan Holder",
-  //   tag: "Bamboonesia",
-  // },
+  {
+    id: 2,
+    src: "/bamboonesia/bn-panholder-001.png",
+    alt: "Bamboo Pan Holder",
+    title: "Bamboo Pan Holder",
+    tag: "Bamboonesia",
+    categories: [
+      {
+        id: 1,
+        src: "/bamboonesia/bn-panholder-001.png",
+        alt: "Bamboo Pan Holder",
+        title: "Bamboo Pan Holder",
+        tag: "Bamboonesia",
+      },
+    ],
+  },
   // {
   //   id: 3,
   //   src: "/bamboonesia/bn-roundcoaster.png",
@@ -245,12 +247,16 @@ const productImages: ProductImage[] = [
 ];
 
 export default function Product() {
-  const [selectedProduct, setSelectedProduct] = useState<ProductImage | null>(null);
-  const [selectedImage, setSelectedImage] = useState<CategoryImage | null>(null);
+  const [selectedProduct, setSelectedProduct] = useState<ProductImage | null>(
+    null
+  );
+  const [selectedImage, setSelectedImage] = useState<CategoryImage | null>(
+    null
+  );
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const openModal = useCallback((image: ProductImage) => {
-    setSelectedProduct(image)
+    setSelectedProduct(image);
     setSelectedImage(image?.categories[0]);
     setSelectedIndex(image?.categories[0]?.id);
   }, []);
@@ -270,7 +276,8 @@ export default function Product() {
   const prevImage = useCallback(() => {
     if (selectedIndex === null || selectedProduct === null) return;
     const prevIndex =
-      (selectedIndex - 1 + selectedProduct?.categories?.length) % selectedProduct?.categories?.length;
+      (selectedIndex - 1 + selectedProduct?.categories?.length) %
+      selectedProduct?.categories?.length;
     setSelectedImage(selectedProduct?.categories[prevIndex]);
     setSelectedIndex(prevIndex);
   }, [selectedIndex]);
