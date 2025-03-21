@@ -1,13 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
-import FooterLogo from "@/public/whatsapp.png";
-import Map from "./Map";
-// import dynamic from "next/dynamic";
-
-// const Map = dynamic(() => import("./Map"), {
-//   ssr: false,
-// });
-
 export default function Footer() {
   return (
     <footer className="bg-one-800" id="contact-us">
@@ -35,9 +27,9 @@ export default function Footer() {
               <div className="flex items-center">
                 <MapPin className="min-w-6 h-6 text-red-500 mr-3" />
                 <p className="text-sm lg:text-base">
-                  Jl. , Semarang,
+                  Jl. Taman Pekunden Timur no 15,
                   <br />
-                  Jawa Tengah, Indonesia
+                  Semarang, Jawa Tengah, Indonesia
                 </p>
               </div>
               <div className="flex items-center">
@@ -55,10 +47,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="relative w-full h-60 md:col-span-2 xl:h-80 rounded-xl overflow-hidden">
-          <Map />
-        </div>
       </div>
+      <hr />
       <div className="bg-one-700 py-4">
         <div className="container mx-auto text-center text-sm">
           <p className="text-two-100">
