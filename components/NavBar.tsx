@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
@@ -12,8 +13,9 @@ export default function NavBar() {
       <div className="wrapper">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="font-bold text-xl text-primary">
-            Kayana
+          <Link href="/" className="flex gap-2 lg:gap-3 items-center font-bold text-xl text-primary">
+            <div className="relative w-8 h-10"><Image src="/logo-only.png" alt="nav logo" fill/></div>
+            <text className="text-2xl">Kayana</text>
           </Link>
 
           {/* Desktop Navigation */}
